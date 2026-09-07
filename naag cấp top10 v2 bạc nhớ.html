@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Top 10 Bạc Nhớ V2 - Memory Core + Cluster</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f1f5f9;
+    color:#1e293b;
+}
+
+header{
+    background:linear-gradient(135deg,#1e1b4b,#4338ca,#7c3aed);
+    color:white;
+    padding:28px 20px;
+    text-align:center;
+}
+
+header h1{
+    margin:0 0 8px 0;
+}
+
+header p{
+    margin:0;
+    opacity:.9;
+}
+
+main{
+    max-width:1500px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    border-radius:14px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 4px 16px rgba(0,0,0,.08);
+}
+
+h2{
+    margin-top:0;
+}
+
+textarea{
+    width:100%;
+    min-height:420px;
+    padding:15px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    resize:vertical;
+    font-family:Consolas,monospace;
+    font-size:14px;
+}
+
+button{
+    border:0;
+    border-radius:8px;
+    padding:12px 18px;
+    margin:10px 8px 0 0;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+}
+
+button:hover{
+    opacity:.88;
+}
+
+.blue{background:#2563eb;}
+.green{background:#059669;}
+.orange{background:#ea580c;}
+.red{background:#dc2626;}
+
+.info{
+    background:#eef2ff;
+    border-left:5px solid #4338ca;
+    padding:15px;
+    border-radius:8px;
+    line-height:1.7;
+}
+
+.success{
+    margin-top:15px;
+    padding:14px;
+    border-radius:8px;
+    background:#ecfdf5;
+    color:#065f46;
+    border-left:5px solid #059669;
+}
+
+.error{
+    margin-top:15px;
+    padding:14px;
+    border-radius:8px;
+    background:#fef2f2;
+    color:#991b1b;
+    border-left:5px solid #dc2626;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+    gap:12px;
+}
+
+.stat{
+    padding:15px;
+    text-align:center;
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+}
+
+.stat strong{
+    display:block;
+    margin-top:6px;
+    font-size:24px;
+    color:#4338ca;
+}
+
+.top-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    gap:12px;
+}
+
+.top-item{
+    text-align:center;
+    padding:15px;
+    border-radius:12px;
+    background:#f8fafc;
+    border:2px solid #cbd5e1;
+}
+
+.core{
+    border-color:#4338ca;
+}
+
+.cluster{
+    border-color:#059669;
+}
+
+.rank{
+    font-size:12px;
+    color:#64748b;
+}
+
+.type{
+    margin-top:5px;
+    font-size:11px;
+    color:#64748b;
+}
+
+.number{
+    font-size:38px;
+    font-weight:bold;
+    margin:8px 0;
+}
+
+.score{
+    font-size:12px;
+    color:#4338ca;
+}
+
+.scroll{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    min-width:1200px;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:10px;
+    border-bottom:1px solid #e2e8f0;
+    text-align:center;
+}
+
+th{
+    background:#f8fafc;
+}
+
+.actual{
+    font-family:Consolas,monospace;
+    font-size:12px;
+}
+
+.day{
+    padding:12px;
+    margin-bottom:12px;
+    border-radius:10px;
+    border:1px solid #e2e8f0;
+    background:#f8fafc;
+}
+
+.day-title{
+    margin-bottom:8px;
+    font-weight:bold;
+    color:#4338ca;
+}
+
+.badge{
+    display:inline-block;
+    padding:3px 7px;
+    margin:2px;
+    background:#e0e7ff;
+    border-radius:5px;
+    font-family:Consolas,monospace;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🧠 Top 10 Bạc Nhớ V2</h1>
+    <p>90-Day Memory Core + Memory Cluster</p>
+</header>
+
+<main>
+
+<div class="card">
+<div class="info">
+
+<b>TOP 10 BẠC NHỚ V2</b>
+
+<br><br>
+
+🧠 <b>6 MEMORY CORE</b><br>
+Chọn 6 số có điểm Bạc Nhớ cao nhất.
+
+<br><br>
+
+🔗 <b>4 MEMORY CLUSTER</b><br>
+Chọn 4 số bổ sung dựa trên:
+<br>
+• Xuất hiện ở ngày kế tiếp của các ngày lịch sử tương tự.<br>
+• Đồng xuất hiện cùng bối cảnh với Memory Core.<br>
+• Có xác nhận trong dữ liệu gần đây.
+
+<br><br>
+
+<b>Dữ liệu nhập:</b> ngày cũ → ngày mới.<br>
+<b>Rolling Window:</b> tối đa 90 ngày.<br>
+<b>Phân tích:</b> toàn bộ 27 giải.<br>
+<b>Đánh giá:</b> chỉ lấy 2 số cuối của 27 giải.<br>
+Một số xuất hiện nhiều lần được tính nhiều nháy.
+
+</div>
+</div>
+
+
+<div class="card">
+
+<h2>Dữ liệu lịch sử</h2>
+
+<textarea id="inputData"
+placeholder="Dán dữ liệu ngày cũ nhất ở trên → ngày mới nhất ở dưới..."></textarea>
+
+<button class="blue" onclick="checkData()">Kiểm tra dữ liệu</button>
+<button class="green" onclick="analyze()">Phân tích Top 10</button>
+<button class="orange" onclick="backtest()">Chạy Backtest</button>
+<button class="red" onclick="clearAll()">Xóa toàn bộ</button>
+
+<div id="status"></div>
+
+</div>
+
+
+<div class="card">
+<h2>Thông tin dữ liệu</h2>
+
+<div id="infoArea" class="grid">
+<div class="stat">Chưa có dữ liệu</div>
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Dữ liệu nhận dạng</h2>
+
+<div id="preview">
+Chưa kiểm tra dữ liệu.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Top 10 Bạc Nhớ V2</h2>
+
+<div id="topResult" class="top-grid">
+Chưa phân tích.
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>Chi tiết Backtest</h2>
+
+<div id="backtestResult">
+Chưa chạy Backtest.
+</div>
+
+</div>
+
+</main>
+
+
+<script>
+
+/* =========================
+CONFIG
+========================= */
+
+const MAX_WINDOW = 90;
+const MIN_HISTORY = 30;
+
+const PRIZES = [
+    {name:"Đặc biệt", count:1, length:5},
+    {name:"Giải nhất", count:1, length:5},
+    {name:"Giải nhì", count:2, length:5},
+    {name:"Giải ba", count:6, length:5},
+    {name:"Giải tư", count:4, length:4},
+    {name:"Giải năm", count:6, length:4},
+    {name:"Giải sáu", count:3, length:3},
+    {name:"Giải bảy", count:4, length:2}
+];
+
+
+/* =========================
+SAFE NUMBER
+========================= */
+
+function safeNumber(value){
+
+    const n = Number(value);
+
+    if(!Number.isFinite(n)){
+        return 0;
+    }
+
+    return n;
+}
+
+function fixed(value, digits = 4){
+
+    return safeNumber(value).toFixed(digits);
+}
+
+
+/* =========================
+STATUS
+========================= */
+
+function setStatus(message,type){
+
+    const el = document.getElementById("status");
+
+    el.className = type;
+    el.textContent = message;
+}
+
+
+/* =========================
+PARSE INPUT
+========================= */
+
+function cleanInput(text){
+
+    return String(text || "")
+        .replace(/\r/g,"\n")
+        .replace(/\t/g,"\n")
+        .replace(/&nbsp;/gi," ")
+        .replace(/<br\s*\/?>/gi,"\n")
+        .replace(/<\/?[^>]+>/g,"\n");
+}
+
+
+function splitFixed(digits,length,count){
+
+    const result = [];
+
+    for(let i=0;i<count;i++){
+
+        const start = i * length;
+
+        const value = digits.substring(
+            start,
+            start + length
+        );
+
+        if(value.length === length){
+            result.push(value);
+        }
+    }
+
+    return result;
+}
+
+
+function parseDay(block){
+
+    const day = {
+        prizes:{},
+        numbers:[]
+    };
+
+    for(let i=0;i<PRIZES.length;i++){
+
+        const prize = PRIZES[i];
+
+        const regex = new RegExp(
+            prize.name,
+            "i"
+        );
+
+        const match = regex.exec(block);
+
+        if(!match){
+
+            day.prizes[prize.name] = [];
+            continue;
+        }
+
+        const start =
+            match.index +
+            match[0].length;
+
+        let end = block.length;
+
+        for(let j=i+1;j<PRIZES.length;j++){
+
+            const nextRegex =
+                new RegExp(
+                    PRIZES[j].name,
+                    "i"
+                );
+
+            const next =
+                nextRegex.exec(block);
+
+            if(
+                next &&
+                next.index > start
+            ){
+                end = next.index;
+                break;
+            }
+        }
+
+        const section =
+            block.substring(
+                start,
+                end
+            );
+
+        const digits =
+            (section.match(/\d+/g) || [])
+            .join("");
+
+        const need =
+            prize.count *
+            prize.length;
+
+        const values =
+            splitFixed(
+                digits.substring(0,need),
+                prize.length,
+                prize.count
+            );
+
+        day.prizes[prize.name] =
+            values;
+
+        values.forEach(v=>{
+            day.numbers.push(v);
+        });
+    }
+
+    return day;
+}
+
+
+function getDays(){
+
+    const raw =
+        document.getElementById(
+            "inputData"
+        ).value;
+
+    const clean =
+        cleanInput(raw);
+
+    const blocks =
+        clean.split(
+            /(?=Đặc biệt)/gi
+        );
+
+    const days = [];
+
+    blocks.forEach(block=>{
+
+        const text =
+            block.trim();
+
+        if(/^Đặc biệt/i.test(text)){
+
+            const day =
+                parseDay(text);
+
+            if(day.numbers.length > 0){
+                days.push(day);
+            }
+        }
+    });
+
+    return days;
+}
+
+
+/* =========================
+TAILS
+========================= */
+
+function getTails(day){
+
+    if(
+        !day ||
+        !Array.isArray(day.numbers)
+    ){
+        return [];
+    }
+
+    return day.numbers
+        .filter(
+            n =>
+            typeof n === "string" &&
+            n.length >= 2
+        )
+        .map(
+            n => n.slice(-2)
+        );
+}
+
+
+/* =========================
+WINDOW
+========================= */
+
+function getWindow(days){
+
+    if(days.length <= MAX_WINDOW){
+        return days.slice();
+    }
+
+    return days.slice(
+        days.length - MAX_WINDOW
+    );
+}
+
+
+/* =========================
+CREATE NUMBERS
+========================= */
+
+function createNumbers(){
+
+    const result = [];
+
+    for(let i=0;i<100;i++){
+
+        result.push({
+
+            number:
+                String(i)
+                .padStart(2,"0"),
+
+            frequency:0,
+            gapScore:0,
+            echo:0,
+            recent:0,
+
+            frequencyNorm:0,
+            gapNorm:0,
+            echoNorm:0,
+            recentNorm:0,
+
+            coreScore:0
+        });
+    }
+
+    return result;
+}
+
+
+/* =========================
+NORMALIZE
+========================= */
+
+function normalize(items,key,newKey){
+
+    const values =
+        items.map(
+            x => safeNumber(x[key])
+        );
+
+    const max =
+        Math.max(...values);
+
+    const min =
+        Math.min(...values);
+
+    items.forEach(item=>{
+
+        const value =
+            safeNumber(item[key]);
+
+        if(max === min){
+
+            item[newKey] = 0;
+
+        }else{
+
+            item[newKey] =
+                (value - min) /
+                (max - min);
+        }
+    });
+}
+
+
+/* =========================
+FREQUENCY
+========================= */
+
+function calculateFrequency(
+    history,
+    items
+){
+
+    items.forEach(item=>{
+
+        let occurrences = 0;
+        let daysPresent = 0;
+
+        history.forEach(day=>{
+
+            const tails =
+                getTails(day);
+
+            const count =
+                tails.filter(
+                    n =>
+                    n === item.number
+                ).length;
+
+            occurrences += count;
+
+            if(count > 0){
+                daysPresent++;
+            }
+        });
+
+        item.frequency =
+            occurrences * 0.6 +
+            daysPresent * 0.4;
+    });
+}
+
+
+/* =========================
+GAP
+========================= */
+
+function calculateGap(
+    history,
+    items
+){
+
+    items.forEach(item=>{
+
+        const positions = [];
+
+        history.forEach(
+            (day,index)=>{
+
+                if(
+                    getTails(day)
+                    .includes(item.number)
+                ){
+                    positions.push(index);
+                }
+            }
+        );
+
+        if(positions.length < 2){
+
+            item.gapScore = 0;
+            return;
+        }
+
+        const gaps = [];
+
+        for(let i=1;i<positions.length;i++){
+
+            gaps.push(
+                positions[i] -
+                positions[i-1]
+            );
+        }
+
+        const average =
+            gaps.reduce(
+                (a,b)=>a+b,
+                0
+            ) / gaps.length;
+
+        const currentGap =
+            history.length - 1 -
+            positions[
+                positions.length-1
+            ];
+
+        const difference =
+            Math.abs(
+                currentGap -
+                average
+            );
+
+        item.gapScore =
+            1 / (1 + difference);
+    });
+}
+
+
+/* =========================
+RECENT
+========================= */
+
+function calculateRecent(
+    history,
+    items
+){
+
+    const start =
+        Math.max(
+            0,
+            history.length - 14
+        );
+
+    items.forEach(item=>{
+
+        let score = 0;
+
+        for(
+            let i=start;
+            i<history.length;
+            i++
+        ){
+
+            const tails =
+                getTails(
+                    history[i]
+                );
+
+            const distance =
+                history.length - 1 - i;
+
+            const weight =
+                1 /
+                (
+                    1 +
+                    distance * 0.15
+                );
+
+            tails.forEach(n=>{
+
+                if(
+                    n === item.number
+                ){
+                    score += weight;
+                }
+            });
+        }
+
+        item.recent = score;
+    });
+}
+
+
+/* =========================
+SELECTIVE ECHO
+========================= */
+
+function calculateEcho(
+    history,
+    items
+){
+
+    if(history.length < 3){
+        return;
+    }
+
+    const currentTails =
+        getTails(
+            history[
+                history.length - 1
+            ]
+        );
+
+    const currentSet =
+        new Set(currentTails);
+
+    if(currentSet.size === 0){
+        return;
+    }
+
+    const similarDays = [];
+
+    for(
+        let i=0;
+        i<history.length-1;
+        i++
+    ){
+
+        const oldSet =
+            new Set(
+                getTails(
+                    history[i]
+                )
+            );
+
+        let common = 0;
+
+        currentSet.forEach(n=>{
+
+            if(oldSet.has(n)){
+                common++;
+            }
+        });
+
+        const similarity =
+            common /
+            currentSet.size;
+
+        similarDays.push({
+            index:i,
+            similarity
+        });
+    }
+
+    similarDays.sort(
+        (a,b)=>
+        b.similarity -
+        a.similarity
+    );
+
+    const limit =
+        Math.max(
+            5,
+            Math.floor(
+                similarDays.length *
+                0.20
+            )
+        );
+
+    const selected =
+        similarDays
+        .slice(0,limit)
+        .filter(
+            x =>
+            x.similarity > 0
+        );
+
+    selected.forEach(item=>{
+
+        const next =
+            getTails(
+                history[
+                    item.index + 1
+                ]
+            );
+
+        next.forEach(number=>{
+
+            const target =
+                items.find(
+                    x =>
+                    x.number === number
+                );
+
+            if(target){
+
+                target.echo +=
+                    item.similarity;
+            }
+        });
+    });
+}
+
+
+/* =========================
+CORE
+========================= */
+
+function calculateCore(history){
+
+    const items =
+        createNumbers();
+
+    calculateFrequency(
+        history,
+        items
+    );
+
+    calculateGap(
+        history,
+        items
+    );
+
+    calculateRecent(
+        history,
+        items
+    );
+
+    calculateEcho(
+        history,
+        items
+    );
+
+    normalize(
+        items,
+        "frequency",
+        "frequencyNorm"
+    );
+
+    normalize(
+        items,
+        "gapScore",
+        "gapNorm"
+    );
+
+    normalize(
+        items,
+        "echo",
+        "echoNorm"
+    );
+
+    normalize(
+        items,
+        "recent",
+        "recentNorm"
+    );
+
+    items.forEach(item=>{
+
+        item.coreScore =
+
+            safeNumber(
+                item.frequencyNorm
+            ) * 0.25 +
+
+            safeNumber(
+                item.gapNorm
+            ) * 0.25 +
+
+            safeNumber(
+                item.echoNorm
+            ) * 0.30 +
+
+            safeNumber(
+                item.recentNorm
+            ) * 0.20;
+    });
+
+    return items;
+}
+
+
+/* =========================
+CLUSTER
+========================= */
+
+function calculateCluster(
+    history,
+    core
+){
+
+    const currentSet =
+        new Set(
+            getTails(
+                history[
+                    history.length - 1
+                ]
+            )
+        );
+
+    const scores = {};
+
+    for(let i=0;i<100;i++){
+
+        const n =
+            String(i)
+            .padStart(2,"0");
+
+        scores[n] = {
+            number:n,
+            overlap:0,
+            coOccurrence:0,
+            recent:0,
+            score:0
+        };
+    }
+
+    const coreNumbers =
+        new Set(
+            core.map(
+                x => x.number
+            )
+        );
+
+
+    /* Historical Similarity */
+
+    const similar = [];
+
+    for(
+        let i=0;
+        i<history.length-1;
+        i++
+    ){
+
+        const set =
+            new Set(
+                getTails(
+                    history[i]
+                )
+            );
+
+        let common = 0;
+
+        currentSet.forEach(n=>{
+
+            if(set.has(n)){
+                common++;
+            }
+        });
+
+        const similarity =
+            currentSet.size === 0
+            ? 0
+            : common /
+              currentSet.size;
+
+        similar.push({
+            index:i,
+            similarity
+        });
+    }
+
+    similar.sort(
+        (a,b)=>
+        b.similarity -
+        a.similarity
+    );
+
+    const limit =
+        Math.max(
+            5,
+            Math.floor(
+                similar.length *
+                0.20
+            )
+        );
+
+    similar
+    .slice(0,limit)
+    .filter(
+        x =>
+        x.similarity > 0
+    )
+    .forEach(item=>{
+
+        const next =
+            getTails(
+                history[
+                    item.index + 1
+                ]
+            );
+
+        next.forEach(number=>{
+
+            scores[number].overlap +=
+                item.similarity;
+        });
+    });
+
+
+    /* Co-occurrence */
+
+    for(let i=0;i<history.length;i++){
+
+        const tails =
+            getTails(
+                history[i]
+            );
+
+        const coreCount =
+            tails.filter(
+                n =>
+                coreNumbers.has(n)
+            ).length;
+
+        if(coreCount === 0){
+            continue;
+        }
+
+        const weight =
+            coreCount /
+            core.length;
+
+        tails.forEach(number=>{
+
+            if(
+                !coreNumbers.has(number)
+            ){
+
+                scores[number]
+                .coOccurrence +=
+                    weight;
+            }
+        });
+    }
+
+
+    /* Recent */
+
+    const start =
+        Math.max(
+            0,
+            history.length - 14
+        );
+
+    for(
+        let i=start;
+        i<history.length;
+        i++
+    ){
+
+        const distance =
+            history.length - 1 - i;
+
+        const weight =
+            1 /
+            (
+                1 +
+                distance * 0.15
+            );
+
+        getTails(
+            history[i]
+        ).forEach(number=>{
+
+            if(
+                !coreNumbers.has(number)
+            ){
+
+                scores[number]
+                .recent +=
+                    weight;
+            }
+        });
+    }
+
+
+    const array =
+        Object.values(scores);
+
+    normalize(
+        array,
+        "overlap",
+        "overlapNorm"
+    );
+
+    normalize(
+        array,
+        "coOccurrence",
+        "coOccurrenceNorm"
+    );
+
+    normalize(
+        array,
+        "recent",
+        "recentNorm"
+    );
+
+    array.forEach(item=>{
+
+        item.score =
+
+            safeNumber(
+                item.overlapNorm
+            ) * 0.45 +
+
+            safeNumber(
+                item.coOccurrenceNorm
+            ) * 0.35 +
+
+            safeNumber(
+                item.recentNorm
+            ) * 0.20;
+    });
+
+    return array;
+}
+
+
+/* =========================
+PREDICTION
+========================= */
+
+function buildPrediction(history){
+
+    const coreAll =
+        calculateCore(history);
+
+    const core =
+        [...coreAll]
+        .sort(
+            (a,b)=>
+            b.coreScore -
+            a.coreScore
+        )
+        .slice(0,6);
+
+    const coreSet =
+        new Set(
+            core.map(
+                x => x.number
+            )
+        );
+
+    const clusterAll =
+        calculateCluster(
+            history,
+            core
+        );
+
+    const cluster =
+        clusterAll
+        .filter(
+            x =>
+            !coreSet.has(
+                x.number
+            )
+        )
+        .sort(
+            (a,b)=>
+            b.score -
+            a.score
+        )
+        .slice(0,4);
+
+    return {
+        core,
+        cluster,
+        top:[
+            ...core,
+            ...cluster
+        ]
+    };
+}
+
+
+/* =========================
+CHECK DATA
+========================= */
+
+function checkData(){
+
+    try{
+
+        const days =
+            getDays();
+
+        if(days.length === 0){
+
+            throw new Error(
+                "Không nhận dạng được dữ liệu."
+            );
+        }
+
+        const complete =
+            days.filter(
+                day =>
+                day.numbers.length === 27
+            ).length;
+
+        document.getElementById(
+            "infoArea"
+        ).innerHTML = `
+
+        <div class="stat">
+        Tổng ngày
+        <strong>${days.length}</strong>
+        </div>
+
+        <div class="stat">
+        Đủ 27 giải
+        <strong>${complete}</strong>
+        </div>
+
+        <div class="stat">
+        Rolling Window
+        <strong>${Math.min(days.length,90)}</strong>
+        </div>
+
+        <div class="stat">
+        Thứ tự
+        <strong>Cũ → Mới</strong>
+        </div>
+        `;
+
+        let html = "";
+
+        days.forEach(
+            (day,index)=>{
+                html += `
+                <div class="day">
+                    <div class="day-title">
+                    Ngày ${index+1}
+                    ${index===0?" (CŨ NHẤT)":""}
+                    ${index===days.length-1?" (MỚI NHẤT)":""}
+                    — ${day.numbers.length}/27 giải
+                    </div>
+                `;
+
+                PRIZES.forEach(prize=>{
+
+                    const values =
+                        day.prizes[
+                            prize.name
+                        ] || [];
+
+                    html += `
+                    <div>
+                    <b>${prize.name}:</b>
+                    `;
+
+                    values.forEach(value=>{
+                        html += `
+                        <span class="badge">
+                        ${value}
+                        </span>
+                        `;
+                    });
+
+                    html += `</div>`;
+                });
+
+                html += `</div>`;
+            }
+        );
+
+        document.getElementById(
+            "preview"
+        ).innerHTML = html;
+
+        if(
+            complete === days.length
+        ){
+
+            setStatus(
+                `Dữ liệu hợp lệ: ${days.length} ngày, tất cả đủ 27 giải.`,
+                "success"
+            );
+
+        }else{
+
+            setStatus(
+                `Có ${days.length-complete} ngày chưa đủ 27 giải.`,
+                "error"
+            );
+        }
+
+    }catch(error){
+
+        setStatus(
+            "Lỗi: " +
+            error.message,
+            "error"
+        );
+    }
+}
+
+
+/* =========================
+ANALYZE
+========================= */
+
+function analyze(){
+
+    try{
+
+        const days =
+            getDays();
+
+        if(
+            days.length <
+            MIN_HISTORY
+        ){
+
+            throw new Error(
+                `Cần ít nhất ${MIN_HISTORY} ngày dữ liệu.`
+            );
+        }
+
+        if(
+            days.some(
+                d =>
+                d.numbers.length !== 27
+            )
+        ){
+
+            throw new Error(
+                "Có ngày chưa đủ 27 giải."
+            );
+        }
+
+        const history =
+            getWindow(days);
+
+        const result =
+            buildPrediction(history);
+
+        let html = "";
+
+        result.core.forEach(
+            (item,index)=>{
+
+                html += `
+                <div class="top-item core">
+                    <div class="rank">
+                    TOP ${index+1}
+                    </div>
+
+                    <div class="type">
+                    🧠 MEMORY CORE
+                    </div>
+
+                    <div class="number">
+                    ${item.number}
+                    </div>
+
+                    <div class="score">
+                    ${fixed(item.coreScore)}
+                    </div>
+                </div>
+                `;
+            }
+        );
+
+        result.cluster.forEach(
+            (item,index)=>{
+
+                html += `
+                <div class="top-item cluster">
+                    <div class="rank">
+                    TOP ${index+7}
+                    </div>
+
+                    <div class="type">
+                    🔗 MEMORY CLUSTER
+                    </div>
+
+                    <div class="number">
+                    ${item.number}
+                    </div>
+
+                    <div class="score">
+                    ${fixed(item.score)}
+                    </div>
+                </div>
+                `;
+            }
+        );
+
+        document.getElementById(
+            "topResult"
+        ).innerHTML = html;
+
+        setStatus(
+            `Đã phân tích Top 10 bằng ${history.length} ngày gần nhất.`,
+            "success"
+        );
+
+    }catch(error){
+
+        setStatus(
+            "Lỗi phân tích: " +
+            error.message,
+            "error"
+        );
+    }
+}
+
+
+/* =========================
+COUNT HITS
+========================= */
+
+function countHits(
+    prediction,
+    actual
+){
+
+    const counts = {};
+
+    getTails(actual)
+    .forEach(number=>{
+
+        counts[number] =
+            safeNumber(
+                counts[number]
+            ) + 1;
+    });
+
+    let hits = 0;
+
+    const hitList = [];
+
+    prediction.forEach(item=>{
+
+        const number =
+            item.number;
+
+        const count =
+            safeNumber(
+                counts[number]
+            );
+
+        hits += count;
+
+        if(count > 0){
+
+            hitList.push(
+                number + " ×" + count
+            );
+        }
+    });
+
+    return {
+        hits,
+        hitList
+    };
+}
+
+
+/* =========================
+BACKTEST
+========================= */
+
+function backtest(){
+
+    try{
+
+        const days =
+            getDays();
+
+        if(
+            days.length <=
+            MIN_HISTORY
+        ){
+
+            throw new Error(
+                `Cần nhiều hơn ${MIN_HISTORY} ngày để Backtest.`
+            );
+        }
+
+        if(
+            days.some(
+                day =>
+                day.numbers.length !== 27
+            )
+        ){
+
+            throw new Error(
+                "Có ngày chưa đủ 27 giải."
+            );
+        }
+
+        let tests = 0;
+        let totalHits = 0;
+
+        let zero = 0;
+        let one = 0;
+        let two = 0;
+        let three = 0;
+        let four = 0;
+        let fivePlus = 0;
+
+        let currentZero = 0;
+        let maxZero = 0;
+
+        let rows = "";
+
+        for(
+            let targetIndex =
+                MIN_HISTORY;
+
+            targetIndex <
+                days.length;
+
+            targetIndex++
+        ){
+
+            /*
+            Chỉ dùng dữ liệu
+            trước ngày kiểm tra
+            */
+
+            const fullHistory =
+                days.slice(
+                    0,
+                    targetIndex
+                );
+
+            const history =
+                getWindow(
+                    fullHistory
+                );
+
+            const actual =
+                days[targetIndex];
+
+            const prediction =
+                buildPrediction(
+                    history
+                );
+
+            const hitResult =
+                countHits(
+                    prediction.top,
+                    actual
+                );
+
+            const hits =
+                safeNumber(
+                    hitResult.hits
+                );
+
+            tests++;
+            totalHits += hits;
+
+            if(hits === 0){
+
+                zero++;
+
+                currentZero++;
+
+                maxZero =
+                    Math.max(
+                        maxZero,
+                        currentZero
+                    );
+
+            }else{
+
+                currentZero = 0;
+            }
+
+            if(hits === 1) one++;
+            if(hits === 2) two++;
+            if(hits === 3) three++;
+            if(hits === 4) four++;
+            if(hits >= 5) fivePlus++;
+
+            rows += `
+            <tr>
+
+                <td>${tests}</td>
+
+                <td>
+                ${prediction.core
+                    .map(
+                        x => x.number
+                    )
+                    .join(" - ")}
+                </td>
+
+                <td>
+                ${prediction.cluster
+                    .map(
+                        x => x.number
+                    )
+                    .join(" - ")}
+                </td>
+
+                <td class="actual">
+                ${getTails(actual)
+                    .join(" - ")}
+                </td>
+
+                <td>
+                ${
+                    hitResult.hitList.length
+                    ? hitResult.hitList.join(", ")
+                    : "Không trùng"
+                }
+                </td>
+
+                <td>
+                <b>${hits}</b>
+                </td>
+
+            </tr>
+            `;
+        }
+
+        if(tests === 0){
+
+            throw new Error(
+                "Không có lượt Backtest hợp lệ."
+            );
+        }
+
+        const average =
+            totalHits / tests;
+
+        const rate1 =
+            ((tests-zero)/tests)
+            *100;
+
+        const rate2 =
+            (
+                (
+                    two+
+                    three+
+                    four+
+                    fivePlus
+                ) / tests
+            ) * 100;
+
+        const rate3 =
+            (
+                (
+                    three+
+                    four+
+                    fivePlus
+                ) / tests
+            ) * 100;
+
+        const rate4 =
+            (
+                (
+                    four+
+                    fivePlus
+                ) / tests
+            ) * 100;
+
+        const rate5 =
+            (
+                fivePlus /
+                tests
+            ) * 100;
+
+        document.getElementById(
+            "backtestResult"
+        ).innerHTML = `
+
+        <div class="grid">
+
+        <div class="stat">
+        Tổng lần Backtest
+        <strong>${tests}</strong>
+        </div>
+
+        <div class="stat">
+        Tổng số nháy
+        <strong>${totalHits}</strong>
+        </div>
+
+        <div class="stat">
+        Trung bình
+        <strong>${fixed(average,2)}</strong>
+        nháy / lần
+        </div>
+
+        <div class="stat">
+        Số ngày 0 nháy
+        <strong>${zero}</strong>
+        </div>
+
+        <div class="stat">
+        Số ngày 1 nháy
+        <strong>${one}</strong>
+        </div>
+
+        <div class="stat">
+        Số ngày 2 nháy
+        <strong>${two}</strong>
+        </div>
+
+        <div class="stat">
+        Số ngày 3 nháy
+        <strong>${three}</strong>
+        </div>
+
+        <div class="stat">
+        Số ngày 4 nháy
+        <strong>${four}</strong>
+        </div>
+
+        <div class="stat">
+        Số ngày ≥5 nháy
+        <strong>${fivePlus}</strong>
+        </div>
+
+        <div class="stat">
+        Tỷ lệ ≥1 nháy
+        <strong>${fixed(rate1,1)}%</strong>
+        </div>
+
+        <div class="stat">
+        Tỷ lệ ≥2 nháy
+        <strong>${fixed(rate2,1)}%</strong>
+        </div>
+
+        <div class="stat">
+        Tỷ lệ ≥3 nháy
+        <strong>${fixed(rate3,1)}%</strong>
+        </div>
+
+        <div class="stat">
+        Tỷ lệ ≥4 nháy
+        <strong>${fixed(rate4,1)}%</strong>
+        </div>
+
+        <div class="stat">
+        Tỷ lệ ≥5 nháy
+        <strong>${fixed(rate5,1)}%</strong>
+        </div>
+
+        <div class="stat">
+        Chuỗi 0 dài nhất
+        <strong>${maxZero}</strong>
+        </div>
+
+        </div>
+
+        <br>
+
+        <div class="info">
+
+        <b>Quy tắc Backtest Bạc Nhớ V2</b>
+
+        <br><br>
+
+        Dữ liệu nhập theo thứ tự ngày cũ → ngày mới.<br>
+
+        Mỗi lần dự đoán chỉ sử dụng dữ liệu cũ hơn ngày kiểm tra.<br>
+
+        Không sử dụng dữ liệu tương lai.<br>
+
+        Mỗi lần phân tích chỉ sử dụng tối đa 90 ngày gần nhất.<br><br>
+
+        🧠 6 số Memory Core.<br>
+        🔗 4 số Memory Cluster.<br><br>
+
+        Phân tích toàn bộ 27 giải.<br>
+
+        Đánh giá chỉ lấy 2 số cuối của 27 giải.<br>
+
+        Một số xuất hiện nhiều lần được tính nhiều nháy.
+
+        </div>
+
+        <br>
+
+        <div class="scroll">
+
+        <table>
+
+        <thead>
+        <tr>
+            <th>Lần</th>
+            <th>6 CORE</th>
+            <th>4 CLUSTER</th>
+            <th>27 đuôi thực tế</th>
+            <th>Số trùng</th>
+            <th>Nháy</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        ${rows}
+        </tbody>
+
+        </table>
+
+        </div>
+        `;
+
+        setStatus(
+            "Backtest Bạc Nhớ V2 hoàn tất.",
+            "success"
+        );
+
+    }catch(error){
+
+        setStatus(
+            "Lỗi Backtest: " +
+            error.message,
+            "error"
+        );
+    }
+}
+
+
+/* =========================
+CLEAR
+========================= */
+
+function clearAll(){
+
+    document.getElementById(
+        "inputData"
+    ).value = "";
+
+    document.getElementById(
+        "status"
+    ).innerHTML = "";
+
+    document.getElementById(
+        "preview"
+    ).innerHTML =
+        "Chưa kiểm tra dữ liệu.";
+
+    document.getElementById(
+        "topResult"
+    ).innerHTML =
+        "Chưa phân tích.";
+
+    document.getElementById(
+        "backtestResult"
+    ).innerHTML =
+        "Chưa chạy Backtest.";
+
+    document.getElementById(
+        "infoArea"
+    ).innerHTML =
+        `<div class="stat">
+        Chưa có dữ liệu
+        </div>`;
+}
+
+</script>
+
+</body>
+</html>
